@@ -7,100 +7,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: white; color: black; text-align: center; padding: 100px 20px; }
-        nav { background: rgba(0, 0, 0, 0.9); padding: 15px; position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: flex-end; align-items: center; padding-right: 20px; }
-        .nav-logo { width: 50px; height: 50px; position: absolute; left: 20px; top: 10px; }
-        .nav-menu { display: flex; gap: 15px; }
-        nav a { color: white; text-decoration: none; font-weight: 500; font-size: 16px; padding: 8px 12px; border-radius: 5px; transition: 0.3s ease-in-out; }
-        nav a:hover { background: red; color: #fff; }
-        .container { max-width: 800px; margin: 80px auto; }
-        .box { background: #333; color: white; padding: 20px; border-radius: 10px; display: inline-block; text-align: left; font-size: 18px; line-height: 1.8; position: relative; width: 100%; }
+        body { background-color: white; color: black; text-align: center; padding: 80px 20px; }
+        
+        /* Navigation Bar */
+        nav { background: rgba(0, 0, 0, 0.9); padding: 15px; position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 50px; margin-left: 20px; }
+        .menu-icon { display: none; font-size: 30px; cursor: pointer; color: white; padding-right: 20px; }
+        .nav-links { display: flex; list-style: none; gap: 15px; padding-right: 20px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 16px; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+        .nav-links a:hover { background: red; color: white; }
+        
+        /* Container */
+        .container { max-width: 800px; margin: 100px auto 50px; }
+        .box { background: #333; color: white; padding: 20px; border-radius: 10px; text-align: left; font-size: 18px; line-height: 1.8; }
         .box h2 { text-align: center; margin-bottom: 20px; }
         .member-list { list-style: none; padding: 0; }
         .member-list li { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #555; }
+        
+        /* Back Button */
         .back-home { margin-top: 30px; display: inline-block; padding: 10px 20px; background: red; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s; }
         .back-home:hover { background: darkred; }
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    padding: 15px 20px;
-    color: white;
-}
-
-.logo img {
-    height: 50px; /* Logo Size */
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Hamburger Menu */
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block; /* Show hamburger menu on small screens */
-    }
-
-    .nav-links {
-        display: none; /* Hide normal menu */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #444;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show menu when active */
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 10px;
-        color: white;
-        text-decoration: none;
-    }
-}
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .menu-icon { display: block; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; right: 0; background: #444; width: 100%; text-align: center; }
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 10px 0; }
+            .nav-links a { display: block; padding: 10px; }
+            .box { width: 90%; margin: 0 auto; }
+            .member-list li { flex-direction: column; text-align: center; }
+        }
     </style>
-    <script defer src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 </head>
 <body>
     <nav>
-        <div class = "logo">
-            <img src="Images/Logo.jpg" class="nav-logo">
+        <div class="logo">
+            <img src="Images/Logo.jpg" alt="Logo">
         </div>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <ul class="nav-links">
@@ -113,31 +61,31 @@ nav {
             <li><a href="press.html">Press Release</a></li>
         </ul>
     </nav>
+    
     <div class="container">
         <h1>District Members</h1>
         <div class="box">
             <h2>Our District Representatives</h2>
             <ul class="member-list">
-                <li><span>1. Akash Kumar Ray</span> <span>President</span></li>
-                <li><span>2. Sahrum Alam</span> <span>General Secretary</span></li>
-                <li><span>3. Pavan Kumar</span> <span>Treasurer</span></li>
-                <li><span>4. Prerna Harshwardhan</span> <span>Vice President</span></li>
-                <li><span>5. Vijendra Kumar Singh</span> <span>Joint Secretary</span></li>
-                <li><span>6. Ashutosh Kumar</span> <span>Joint Secretary</span></li>
-                <li><span>7. Vinay Kumar Pandit</span> <span>Technical Director</span></li>
-                <li><span>8. Satish Kumar Singh</span> <span>Patron</span></li>
-                <li><span>9. Deepak Kumar Singh</span> <span>Patron</span></li>
-                <li><span>10. Chandan Kumar</span> <span>Patron</span></li>
-                <li><span>11. Yashwant Kumar</span> <span>Patron</span></li>
-                <li><span>12. Ansal Gupta</span> <span>Member</span></li>
-                <li><span>13. Alka Kumari</span> <span>Member</span></li>
-                <li><span>14. Vandana Kumari</span> <span>Member</span></li>
-                <li><span>15. Prashant Kumar</span> <span>Member</span></li>
-                <li><span>16. Rubi Kumari</span> <span>Member</span></li>
-                <li><span>17. Khushi Kumari</span> <span>Member</span></li>
+                <li><span>Akash Kumar Ray</span> <span>President</span></li>
+                <li><span>Sahrum Alam</span> <span>General Secretary</span></li>
+                <li><span>Pavan Kumar</span> <span>Treasurer</span></li>
+                <li><span>Prerna Harshwardhan</span> <span>Vice President</span></li>
+                <li><span>Vijendra Kumar Singh</span> <span>Joint Secretary</span></li>
+                <li><span>Ashutosh Kumar</span> <span>Joint Secretary</span></li>
+                <li><span>Vinay Kumar Pandit</span> <span>Technical Director</span></li>
+                <li><span>Satish Kumar Singh</span> <span>Patron</span></li>
+                <li><span>Deepak Kumar Singh</span> <span>Patron</span></li>
+                <li><span>Chandan Kumar</span> <span>Patron</span></li>
+                <li><span>Yashwant Kumar</span> <span>Patron</span></li>
+                <li><span>Ansal Gupta</span> <span>Member</span></li>
+                <li><span>Alka Kumari</span> <span>Member</span></li>
+                <li><span>Vandana Kumari</span> <span>Member</span></li>
+                <li><span>Prashant Kumar</span> <span>Member</span></li>
+                <li><span>Rubi Kumari</span> <span>Member</span></li>
+                <li><span>Khushi Kumari</span> <span>Member</span></li>
             </ul>
         </div>
-        <br>
         <a href="index.html" class="back-home">Back to Home</a>
     </div>
 </body>
