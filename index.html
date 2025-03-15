@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karate Association</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: white; color: black; overflow-x: hidden; }
+        nav { background: rgba(0, 0, 0, 0.9); padding: 15px; position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: flex-end; align-items: center; padding-right: 20px; }
+        .nav-logo { width: 50px; height: 50px; position: absolute; left: 20px; top: 10px; }
+        .nav-menu { display: flex; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s ease-in-out; font-size: 16px; padding: 8px 12px; border-radius: 5px; }
+        nav a:hover { background: red; color: #fff; }
+        .landing { display: flex; align-items: center; justify-content: space-between; height: 100vh; padding: 100px 10%; }
+        .landing .text { width: 50%; }
+        .landing h1 { font-size: 50px; font-weight: 600; }
+        .landing p { font-size: 20px; line-height: 1.6; margin-top: 10px; }
+        .landing .logo img { width: 400px; height: 400px; object-fit: contain; }
+        .section-title { text-align: center; font-size: 28px; font-weight: 600; margin: 50px 0 20px; }
+        .team { display: flex; justify-content: center; gap: 40px; margin: 20px 0; }
+        .logos-carousel { display: flex; justify-content: center; gap: 40px; margin: 20px 0; }
+        .team-member img { text-align: center; width: 180px; height: 180px; object-fit: contain; border-radius: 10px; }
+        .logos-carousel img { text-align: center; width: 180px; height: 180px; object-fit: contain; border-radius: 10px; transition: transform 0.3s; }
+        .team-member img:hover { transform: scale(1.4); }
+        .president-section { display: flex; align-items: center; justify-content: center; gap: 40px; background: #333; color: white; padding: 60px; border-radius: 10px; margin-bottom: 50px; }
+        .special-section { display: flex; align-items: center; justify-content: center; gap: 40px;}
+        .Media-section { display: flex; align-items: center; justify-content: center; gap: 40px;}
+        .president-section img { width: 150px; height: 150px; border-radius: 50%; }
+        .special-section img { width: 300px; height: 300px; align-items: center;}
+        .Media-section img { width: 200px; height: 200px; align-items: center;}
+        .message-box { background: #444; color: white; padding: 20px; border-radius: 10px; max-width: 600px; font-style: italic; }
+        .logos-carousel { overflow: hidden; padding: 20px 0; position: relative; white-space: nowrap; }
+        .logos-wrapper { display: flex; gap: 40px; width: max-content; animation: scroll 20s linear infinite; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .footer { background: #111; color: white; padding: 20px; text-align: center; }
+        .footer p { margin-bottom: 10px; }
+        .footer .contact-info { margin: 0 10px;}
+        .footer img { margin: 0 10px; width: 40px;}
+        .Paragraph p { text-align: center; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="Images/Logo.jpg" class="nav-logo">
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="district.html">District Members</a>
+            <a href="champions.html">Our Champions</a>
+            <a href="documents.html">Documents</a>
+            <a href="newsE.html">Events</a>
+            <a href="press.html">Press Release</a>
+        </div>
+    </nav>
+    <section class="landing">
+        <div class="text">
+            <h1>District Karate Association of Saran</h1>
+            <p>DISTRICT KARATE ASSOCIATION Of SARAN (DKAS) is an affiliated member of STATE KARATE ASSOCIATION OF BIHAR (SKAB) and KARATE INDIA ORGANISATION (KIO). KIO is the only National federation for karate sport in India with affiliation to world karate federation (WKF), ASIAN KARATE FEDRATION (AKF), COMMONWEALTH KARATE FEDRATION (CKF) and SOUTH ASIAN KARATE FEDERATION (SAKF).</p>
+        </div>
+        <div class="logo"><img src="Images/Taekwondo.webp"></div>
+    </section>
+    <h2 class="section-title">Our Team</h2>
+    <section class="team">
+        <div class="team-member"><img src="Images/President_Photo.jpg"><p>Akash Kumar Ray<br>President</p></div>
+        <div class="team-member"><img src="Images/Team2.jpg"><p>Sahrum Alam<br>General Secretary</p></div>
+        <div class="team-member"><img src="Images/Team3.jpg"><p>Pavan Kumar<br>Treasurer</p></div>
+    </section>
+    <h2 class="section-title">President's Message</h2>
+    <section class="president-section">
+        <img src="Images/President_Photo.jpg">
+        <p><b>Akash Kumar Ray <br> President(DKAS)<br>3rd DAN Black Belt<br> National - Refree/Judge & Coach(KIO)<br>Joint Secretary - SKAB</b></p>
+        <div class="message-box">"As the president of District Karate Association of Saran, I want to tell you all that our organization is recognised by the State Karate Association of Bihar as well as Karate India Organization which is run by the World Karate Federation. <br> I want the children of Saran district to learn karate as well and make themselves strong and self-reliant by learning karate and karate is a game through which they can earn name by playing in the country and the world and win medals for their country.
+
+            <br><br>Thank you everyone 🙏"</div>
+    </section>
+    <h2 class="section-title">DKAS Athletes</h2>
+    <section class="logos-carousel">
+        <div class="logos-wrapper">
+            <img src="Images/School1.jpg"><img src="Images/School2.jpg"><img src="Images/School3.jpg"><img src="Images/School4.jpg">
+            <img src="Images/School5.jpg"><img src="Images/School6.jpg"><img src="Images/School7.jpg"><img src="Images/School8.jpg">
+            <img src="Images/School9.jpg"><img src="Images/School10.jpg"><img src="Images/School11.jpg"><img src="Images/School12.jpg"><img src="Images/School13.jpg"><img src="Images/School14.jpg"><img src="Images/School15.jpg">
+        </div>
+        <div class="logos-wrapper">
+            <img src="Images/School1.jpg"><img src="Images/School2.jpg"><img src="Images/School3.jpg"><img src="Images/School4.jpg">
+            <img src="Images/School5.jpg"><img src="Images/School6.jpg"><img src="Images/School7.jpg"><img src="Images/School8.jpg">
+            <img src="Images/School9.jpg"><img src="Images/School10.jpg"><img src="Images/School11.jpg"><img src="Images/School12.jpg"><img src="Images/School13.jpg"><img src="Images/School14.jpg"><img src="Images/School15.jpg">
+        </div>
+    </section>
+    <section class="special-section">
+        <a href="Images/Mention_2.jpg" target="_blank">
+            <img src="Images/Mention_2.jpg">
+        </a>
+    </section>
+    <h2 class="section-title">Annual General Meeting - 2025</h2>
+    <div class = "Paragraph">
+        <p>🕒Sunday, 16th Feb 2025</p>
+    </div>
+    <section class="Media-section">
+        <a href="Images/AGM1.jpg" target="_blank">
+            <img src="Images/AGM1.jpg">
+        </a>
+    </section>
+    <h2 class="section-title">DKAS Media Partner</h2>
+    <section class="Media-section">
+        <img src="Images/Media_Partner1.jpg">
+    </section>
+    <footer class="footer">
+        <p class="contact-info">📞 +917970587807 | ✉️ dkaskaratesaran2016@gmail.com</p>
+        <p>🏢 Mahmud Chak, Nayagaon, Saran, Bihar (841217)</p>
+        <a href="https://www.facebook.com/share/17XUdBbMbA/" target="_blank"><img src="Images/Fb_Logo.png"></a>
+        <a href="https://www.instagram.com/akash.akray?igsh=cHdlZTY5ZTRjYzM5" target="_blank"><img src="Images/instagm_logo.png"></a>  
+        <a href="https://youtube.com/@senseiakashkrray?si=i6RtEtSOfYyA6Hu3" target="_blank"><img src="Images/YouTube_Logo.png"></a> 
+    </footer>
+</body>
+</html>

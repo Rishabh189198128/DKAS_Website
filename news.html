@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Association Logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="governing.html">Governing Members</a></li>
+            <li><a href="district.html">District Members</a></li>
+            <li><a href="champions.html">Our Champions</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="news.html" class="active">News & Events</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>News & Events</h1>
+        <p>Stay updated with the latest events and news from our association.</p>
+    </header>
+
+    <!-- News Section -->
+    <div class="news-container">
+        <div class="news-item" onclick="toggleNews(1)">
+            <h3>🏆 Karate Championship 2025 Announced</h3>
+        </div>
+        <div class="news-details" id="news-1">
+            <img src="news1.jpg" alt="News 1">
+            <p>The National Karate Championship 2025 will be held in New Delhi. Top players from across the country will compete for the title. <br>📅 Date: March 20, 2025</p>
+        </div>
+
+        <div class="news-item" onclick="toggleNews(2)">
+            <h3>🥋 New Belt Promotion Criteria Introduced</h3>
+        </div>
+        <div class="news-details" id="news-2">
+            <img src="news2.jpg" alt="News 2">
+            <p>The association has revised its belt promotion criteria to ensure fair evaluation of student progress. <br>🔹 Effective from April 2025.</p>
+        </div>
+
+        <div class="news-item" onclick="toggleNews(3)">
+            <h3>🛡️ Self-Defense Workshop for Students</h3>
+        </div>
+        <div class="news-details" id="news-3">
+            <img src="news3.jpg" alt="News 3">
+            <p>A free self-defense workshop will be conducted in schools to promote safety and awareness among students. <br>📍 Location: Multiple cities</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>📍 Address: 123 Karate Street, City, Country</p>
+        <p>📞 Contact: +123 456 7890 | ✉ Email: contact@karateassociation.com</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
