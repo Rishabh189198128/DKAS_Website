@@ -17,4 +17,8 @@ function toggleNews(id) {
 }
 
 
+function toggleMenu() {
+    let navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
 
