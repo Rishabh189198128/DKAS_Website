@@ -55,21 +55,98 @@
     margin-bottom: 10px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo img {
+    height: 50px; /* Logo Size */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide normal menu */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #444;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+    }
+}
     </style>
     <script defer src="script.js"></script>
 </head>
 <body>
     <nav>
-        <img src="Images/Logo.jpg" class="nav-logo">
-        <div class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="district.html">District Members</a>
-            <a href="champions.html">Our Champions</a>
-            <a href="documents.html">Documents</a>
-            <a href="newsE.html">Events</a>
-            <a href="press.html">Press Release</a>
+        <div class = "logo">
+            <img src="Images/Logo.jpg" class="nav-logo">
         </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="district.html">District Members</a></li>
+            <li><a href="champions.html">Our Champions</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="newsE.html">Events</a></li>
+            <li><a href="press.html">Press Release</a></li>
+        </ul>
     </nav>
 
     <header class="page-header">
