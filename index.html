@@ -13,11 +13,20 @@
         .nav-menu { display: flex; gap: 15px; }
         nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s ease-in-out; font-size: 16px; padding: 8px 12px; border-radius: 5px; }
         nav a:hover { background: red; color: #fff; }
-        .landing { display: flex; align-items: center; justify-content: space-between; height: 100vh; padding: 100px 10%; }
+        .landing { display: flex; align-items: center; justify-content: space-between; height: 100vh; padding: 100px 10%; gap: 40px; }
         .landing .text { width: 50%; }
         .landing h1 { font-size: 50px; font-weight: 600; }
         .landing p { font-size: 20px; line-height: 1.6; margin-top: 10px; }
-        .landing .logo img { width: 400px; height: 400px; object-fit: contain; }
+        .landing .logo img { width: 400px; height: auto; object-fit: contain; }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .landing { flex-direction: column; text-align: center; padding: 50px 5%; }
+            .landing .text { width: 100%; }
+            .landing h1 { font-size: 30px; }
+            .landing p { font-size: 16px; }
+            .landing .logo img { width: 250px; height: auto; }
+        }
         .section-title { text-align: center; font-size: 28px; font-weight: 600; margin: 50px 0 20px; }
         .team { display: flex; justify-content: center; gap: 40px; margin: 20px 0; }
         .team-member { text-align: center; }
